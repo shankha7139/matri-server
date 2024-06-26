@@ -41,6 +41,11 @@ app.use((req, res, next) => {
 
 app.use(express.json());
 
+app.use("/", (req, res) => {
+  res.json("hello");
+});
+
+
 
 app.post("/api/generate-captcha", async (req, res) => {
   const captchaUrl =
